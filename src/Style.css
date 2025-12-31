@@ -1,0 +1,218 @@
+body {
+  background: #01080f;
+  font-family: "Poppins", sans-serif;
+}
+.hero {
+  min-height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  position: relative;
+}
+.logo-img {
+  width: 140px;
+  height: 140px;
+  background: #00ff9d22;
+  border: 2px solid #00ff9d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 30px #00ff9d;
+  animation:
+   glow 3s infinite alternate,
+   jump 4.0s ease-in-out infinite;
+}
+.logo-x {
+  font-size: 76px;
+  font-weight: 800;
+}
+.brand span {
+  animation: glowPulse 2.5s ease-in-out infinite;
+  letter-spacing: -1px;
+}
+@keyframes glowPulse {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.6); }
+  100% { filter: brightness(1); }
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.green {
+  color: #00ff9d;
+  font-size: 50px;
+  font-weight: 700;
+  text-shadow:
+    0 0 10px #00ff9d,
+    0 0 20px #00ff9d,
+    0 0 40px #00ff9d;
+}
+.blue {
+  color: #1fb0ff;
+  font-size: 50px;
+  font-weight: 700;
+  text-shadow:
+    0 0 10px #1fb0ff,
+    0 0 20px #1fb0ff,
+    0 0 40px #1fb0ff;
+}
+
+.title {
+  letter-spacing: 4px;
+  margin-top: 4px;
+}
+.progress {
+  width: 260px;
+  height: 5px;
+  border-radius: 30px;
+  background: #0c1a1d;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.bar {
+  height: 100%;
+  border-radius: 30px;
+  background: linear-gradient(90deg,#00ff9d,#1fb0ff);
+  box-shadow: 0 0 10px #1fb0ff, 0 0 20px #00ff9d;
+  transition: width .15s linear;
+}
+
+.percent {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #e5e5e5;
+}
+.code-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.code-container {
+  border: 2px solid rgba(0, 255, 170, 0.25);
+  border-radius: 12px;
+  padding: 10px 12px;
+  /* box-shadow: 0 0 40px rgba(0, 255, 170, 0.15); */
+  font-family: 'Courier New', monospace;
+  color: #d4d4d4;
+  width: 400px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.code-line {
+display: grid;
+  grid-template-columns: 3ch 1fr;
+  align-items: baseline;
+  margin:0;
+}
+.line-number {
+  text-align: right;
+  padding-right: 2ch;
+  color: #6b7280;
+  user-select: none;
+  font-size: 16px;
+}
+.line-text {
+  white-space: pre;
+  margin-left: 20px;
+}
+.comment {
+  color: gray;
+  font-size: 17px;
+}
+.keyword {
+  color: #c586c0;
+  font-size: 17px;
+}
+.class-name {
+  color: #488cdf;
+  font-size: 17px;
+}
+.method {
+  color: orange;
+  font-size: 17px;
+}
+.string {
+  color: #3ddc97;
+  font-size: 17px;
+}
+.brace,
+.paren {
+  color: #d4d4d4;
+  font-size: 17px;
+}
+.cursor {
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  background-color: #3ddc97;
+  margin-left: 6px;
+  animation: blink 1s steps(2, start) infinite;
+}
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+.particles {
+  position: absolute;
+  inset: 0;
+  list-style: none;
+  overflow: hidden;
+}
+.particles li {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #00ffaa;
+  border-radius: 50%;
+  animation: float 6s linear infinite;
+  opacity: 0.6;
+}
+.particles li:nth-child(1){ left:10%; animation-duration:5s;}
+.particles li:nth-child(2){ left:30%; animation-duration:7s;}
+.particles li:nth-child(3){ left:60%; animation-duration:6s;}
+.particles li:nth-child(4){ left:80%; animation-duration:8s;}
+.particles li:nth-child(5){ left:50%; animation-duration:9s;}
+@keyframes glow {
+  from { box-shadow: 0 0 10px #00ff9d; }
+  to   { box-shadow: 0 0 35px #00ff9d; }
+}
+@keyframes load {
+  0% { width: 10%; }
+  100% { width: 23%; }
+}
+@keyframes float {
+  0% { top: 100%; transform: translateY(0); }
+  100% { top: -10%; transform: translateY(-200px); }
+}
+@media (max-width: 480px) {
+  .code-container {
+    width: 90%;
+    font-size: 12px;
+  }
+  .logo-img {
+    width: 100px;
+    height: 100px;
+  }
+  .logo-x {
+    font-size: 56px;
+  }
+}
