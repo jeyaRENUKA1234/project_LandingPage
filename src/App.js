@@ -22,7 +22,7 @@ function App() {
     //     </a>
     //   </header>
     // </div>
-    <BrowserRouter>
+  <BrowserRouter basename="/project_LandingPage">
       <Routes>
         <Route path="/" element={<LandingPage />} />
       </Routes>
