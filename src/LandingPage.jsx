@@ -45,7 +45,7 @@ function LandingPage() {
   return (
     <div className="hero">
       <div className="logo-box">
-        <img src="/logo.webp" alt="0x logo" className="logo-img" />
+        <img src={process.env.PUBLIC_URL + "/logo.webp"} alt="0x logo" className="logo-img" />
       </div>
       <h1 className="brand">
         <span className="green">0</span><span className="blue">x</span>

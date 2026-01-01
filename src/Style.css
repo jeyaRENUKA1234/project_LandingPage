@@ -100,22 +100,22 @@ body {
   font-size: 12px;
   color: #e5e5e5;
 }
-.code-wrapper {
+/* .code-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-.code-container {
+  align-items: center; */
+/* } */
+/* .code-container {
   border: 2px solid rgba(0, 255, 170, 0.25);
   border-radius: 12px;
   padding: 10px 12px;
-  /* box-shadow: 0 0 40px rgba(0, 255, 170, 0.15); */
+  box-shadow: 0 0 40px rgba(0, 255, 170, 0.15);
   font-family: 'Courier New', monospace;
   color: #d4d4d4;
   width: 400px;
   font-size: 14px;
   line-height: 1.6;
-}
+} */
 .code-line {
 display: grid;
   grid-template-columns: 3ch 1fr;
@@ -214,5 +214,152 @@ display: grid;
   }
   .logo-x {
     font-size: 56px;
+  }
+}
+
+/* Media query for  devices */
+/* Tablets (up to 768px) */
+@media (max-width: 768px) {
+  .hero {
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .logo-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .logo-x {
+    font-size: 66px;
+  }
+
+  .brand span {
+    font-size: 40px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .progress {
+    width: 200px;
+  }
+
+  .percent {
+    font-size: 10px;
+  }
+
+  .code-container {
+    width: 90%;
+    font-size: 13px;
+  }
+}
+
+/* Small laptops (up to 1024px) */
+@media (max-width: 1024px) {
+  .hero {
+    gap: 12px;
+    padding: 30px;
+  }
+
+  .logo-img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .logo-x {
+    font-size: 70px;
+  }
+
+  .brand span {
+    font-size: 45px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .progress {
+    width: 240px;
+  }
+
+  .percent {
+    font-size: 11px;
+  }
+
+  .code-container {
+    width: 75%;
+    font-size: 14px;
+  }
+}
+
+/* Already existing small mobile styles (up to 480px) */
+@media (max-width: 480px) {
+  .code-container {
+    width: 90%;
+    font-size: 12px;
+  }
+
+  .logo-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .logo-x {
+    font-size: 56px;
+  }
+
+  .brand span {
+    font-size: 30px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .progress {
+    width: 180px;
+  }
+
+  .percent {
+    font-size: 10px;
+  }
+}
+.code-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow-x: auto;
+  padding: 0 10px;  
+}
+.code-wrapper {
+  overflow-y: auto;
+}
+.code-container {
+  border: 2px solid rgba(0, 255, 170, 0.25);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-family: 'Courier New', monospace;
+  color: #d4d4d4;
+  width: 100%;        
+  max-width: 500px;   
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-x: auto;   
+  white-space: pre;  
+}
+@media (max-width: 768px) {
+  .code-container {
+    font-size: 13px;
+  }
+}
+
+/* Responsive font size for mobiles */
+@media (max-width: 480px) {
+  .code-container {
+    font-size: 12px;
+    padding: 8px 10px;
   }
 }
