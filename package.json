@@ -2,7 +2,11 @@
   "name": "project",
   "version": "0.1.0",
   "private": true,
+<<<<<<< HEAD
   "homepage": "https://github.com/jeyaRENUKA1234/project_LandingPage",
+=======
+  "homepage": "https://jeyaRENUKA1234.github.io/project_LandingPage",
+>>>>>>> e4d957e9348d09b1150ff33825caddb62d3bdc35
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
@@ -19,7 +23,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+<<<<<<< HEAD
      "predeploy": "npm run build",
+=======
+    "predeploy": "npm run build",
+>>>>>>> e4d957e9348d09b1150ff33825caddb62d3bdc35
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
